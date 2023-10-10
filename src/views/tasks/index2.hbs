@@ -1,0 +1,43 @@
+<div class="max-w-7x5 mx-auto sm:px-8 lg:px-2">
+  <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg mt-12">
+
+    <table class="table-fixed w-full">
+      <thead>
+        <tr class="bg-blue-700 text-white">
+          <th class="w-20 py-4 ...">Cedula Usuario</th>
+          <th class="w-1/1 py-4 ...">Nombres Usuario</th>
+          <th class="w-1/1 py-4 ...">Apellidos Usuario</th>
+          <th class="w-1/1 py-4 ...">Nombres Medico</th>
+          <th class="w-1/1 py-4 ...">Apellidos Medico</th>
+          <th class="w-1/1 py-4 ...">Especializacion Medico</th>
+          <th class="w-1/1 py-4 ...">Fecha</th>
+          <th class="w-1/1 py-4 ...">Hora</th>
+          <th class="w-28 py-4...">Actions</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        {{#each tasks2}}
+        <tr>
+          <td class="py-3 px-6">{{ID}}</td>
+          <td class="p-3 text-center">{{Nombres}}</td>
+          <td class="p-3 text-center">{{Apellidos}}</td>
+          <td class="p-3 text-center">{{Nombres_M}}</td>
+          <td class="p-3 text-center">{{Apellidos_M}}</td>
+          <td class="p-3 text-center">{{Especializacion}}</td>
+          <td class="py-3 px-6">{{Fecha}}</td>
+          <td class="py-3 px-6">{{Hora}}</td>
+
+          <td class="p-3 flex">
+              
+              
+                <a href="/tasks{{cod_cita}}{{ID}}{{ID_medico}}" class="bg-blue-500 text-white px-3 py-1 rounded-sm" type="submit">
+                  <i class="fas fa-pen"></i></a>
+              
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
